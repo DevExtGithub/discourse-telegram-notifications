@@ -18,7 +18,7 @@ module DiscourseTelegramNotifications
 
     def self.setupWebhook(key)
       message = {
-        url: Discourse.base_url+'/telegram/hook/'+SiteSetting.telegram_secret,
+        url: 'https://devext.es/telegram/hook/'+SiteSetting.telegram_secret,
       }
 
       return self.doRequest('setWebhook', message)
